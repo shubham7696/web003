@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="readAll()">
+    <div class="container">
+        <div class="form-container">
+            <form id="myForm">
+
+        <h2>Registration Form</h2>
+        <input type="text" hidden class="editId">
+                <div class="input-name">
+                    <i class="fa fa-user user"></i>
+                    <input type="text" id="firstName" placeholder="First Name" class="name">
+                    <span>
+                        <i class="fa fa-user user"></i>
+                        <input type="text" id="lastName" placeholder="Last Name" class="name">
+                    </span>
+                </div>
+                <div class="input-name">
+                    <i class="fa fa-envelope email"></i>
+                    <input type="text" id="email" placeholder="Email" class="text-email">
+                </div>
+                <div class="input-name">
+                    <i class="fa fa-phone lock"></i>
+                    <input type="text" id="phone" placeholder="Phone" class="text-phone">
+                </div>
+                <div class="input-name">
+                    <i class="fa fa-lock lock"></i>
+                    <input type="text" id="password" placeholder="Password" class="text-password">
+                </div>
+                <div class="input-name">
+                    <input type="radio" id="male" class="radio-button" name="gender" value="M">
+                    <label for="male" style="margin-right: 15px;">Male</label>
+
+                    <input type="radio" id="female" class="radio-button" name="gender" value="F">
+                    <label for="female" style="margin-right: 15px;">Female</label>
+                </div>
+                <div class="input-name">
+                    <select id="country" class="country">
+                        <option>Select a country</option>
+                        <option value="india">India</option>
+                        <option value="italy">italy</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        <option value="russia">Russia</option>
+                        <option value="china">China</option>
+                    </select>
+                    <div class="dropdown-arrow"></div>
+                </div>
+                <div class="input-name">
+                    <input type="checkbox" id="terms" class="check-button">
+                    <label for="terms" class="check">Accept terms & Conditions</label>
+                </div>
+                <div class="input-name">
+                    <input type="submit" class="button" onclick="validateAndInsert(event)" value="Register">
+                </div>
+                <div class="input-name">
+                    <input type="submit" class="updateBtn" onclick="update(event)" value="Update">
+                </div>
+            </form>
+        </div>
+        <div class="table-container">
+            <h2>Registration Data</h2>
+                <table class="table">
+                    <thead>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Gender</th>
+                        <th>Country</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody class="table_data">
+            
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>

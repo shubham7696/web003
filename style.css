@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background: #f2f2f2;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    padding-bottom: 25px;
+    margin: 50px auto 0;
+    border-top: 5px solid blue;
+    box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-container {
+    width: 45%;
+    padding: 20px;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 10px;
+    text-align: center;
+}
+
+.table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container {
+    width: 45%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.input-name {
+    width: 90%;
+    position: relative;
+    margin: 15px auto;
+}
+
+.user {
+    padding:  8px 11px;
+}
+
+.input-name span {
+    margin-left: 35px;
+}
+
+.input-name i {
+    width: 32px;
+    position: absolute;
+    font-size: 18px;
+    color: blue;
+    border-right: 1px dotted #cccccc;
+}
+
+.name {
+    width: 45%;
+    padding: 8px 0 8px 35px;
+    outline: none;
+    /* for chrome */
+    -webkit-transition: all 0.30s ease-in-out;  
+    /* for mozila */
+    -moz-transition: all 0.30s ease-in-out;
+    /* for microsoft */
+    -ms-transition: all 0.30s ease-in-out;
+    /* normal */
+    transition: all 0.30s ease-in-out;
+}
+
+.text-email, .text-phone, .text-password {
+    width: 100%;
+    padding: 8px 0 8px 35px;
+    outline: none;
+}
+
+.name:hover,
+.text-email:hover,
+.text-phone:hover,
+.text-password:hover {
+    background: #fafafa;
+}
+
+.name:focus,
+.text-email:focus,
+.text-phone:focus,
+.text-password:focus {
+    border: 2px solid blue;
+}
+
+.email, .lock { 
+    position: absolute;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.radio-button {
+    margin-right: 8px;
+}
+
+.country {
+    display: inline-block;
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    padding: 0px 15px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    color: #7b7b7b;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.2s ease;
+}
+
+.country::-ms-expand {
+    display: none;
+}
+
+.country:hover, .country:focus {
+    color:blue;
+    background: #fafafa;
+    border: 2px solid blue;
+    outline: none;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 15px;
+    width: 0px;
+    height: 0px;
+    pointer-events: none;
+    border-width: 8px 5px 0px 5px;
+    border-style: solid;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+
+.country:hover + .dropdown-arrow,  .country:focus + .dropdown-arrow{
+    border-top-color: blue;
+}
+
+.check {
+    margin-right: 15px;
+    position: relative;
+}
+
+.check::before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    vertical-align: -2px;
+    border: 2px solid #cccccc;
+    padding: 2px;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+
+.check::after {
+    border-right: 2px solid black;
+    border-top:  2px solid black;
+    content: "";
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 7px;
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin: left top;
+    width: 7px;
+    display: none;
+}
+
+.check-button {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.check-button:hover + .check::before {
+    border-color: blue;
+}
+
+.check-button:checked + .check::before {
+    border-color: green;
+}
+/* check in animation is not a keyword it can be anything */
+.check-button:checked + .check::after {
+    -moz-animation: check 0.8s ease 0s running;
+    -webkit-animation: check 0.8s ease 0s running;
+    animation: check 0.8s ease 0s running;
+    display: block;
+    width: 7px;
+    height: 20px;
+    border-color: green;
+}
+
+@-webkit-keyframes check {
+    0%{height: 0; width: 0;}
+    15%{height: 0; width: 7px;}
+    30%{height: 20px; width: 7px;}
+}
+
+.button {
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.button:hover {
+    background: green;
+}
+
+.updateBtn {
+    display: none;
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.updateBtn:hover {
+    background: green;
+}
+
+
+.table-container h2 {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 100%;
+    }
+
+    .input-name {
+        margin-bottom: -10px;
+    }
+
+    .name {
+        width: 100%;
+        padding: 8px 0px 8px 40px;
+        margin-bottom: 8px;
+    }
+
+    .input-name span {
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .table-container {
+        width: 100%;
+    }
+}
