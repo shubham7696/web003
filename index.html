@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <script src="./script_side_menu.js"></script>
     <title>Registration Form</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="script.js"></script>
-    <script src="script_side_menu.js"></script>
   </head>
 
   <body onload="readAll(); setListeners()">
@@ -39,10 +39,10 @@
 
       <ul>
         <li><a href="#">Nav Item 1</a></li>
-        <li><a href="#">Nav Item 2</a></li>
-        <li><a href="#">Nav Item 3</a></li>
-        <li><a href="#">Nav Item 4</a></li>
-        <li><a href="#">Nav Item 5</a></li>
+        <li class="hideOnMobile"><a href="#">Nav Item 2</a></li>
+        <li class="hideOnMobile"><a href="#">Nav Item 3</a></li>
+        <li class="hideOnMobile"><a href="#">Nav Item 4</a></li>
+        <li class="hideOnMobile"><a href="#">Nav Item 5</a></li>
         <li onclick="showSidebar()">
           <a href="#">
             <svg

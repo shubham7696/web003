@@ -26,12 +26,11 @@ nav ul {
 
 nav li {
   height: 50px;
-  padding: 0 10px 0 10px;
 }
 
 nav a {
   height: 100%;
-  padding: 0px;
+  padding: 0px 30px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -406,4 +405,9 @@ nav li:first-child {
   .table-container {
     width: 100%;
   }
+
+  .hideOnMobile {
+    display: none;
+  }
+  
 }
